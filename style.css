@@ -11,8 +11,12 @@ html {
 
 .main-nav {
     position: absolute;
-    padding: 38px;
+    padding-top: 38px;
     width: 100%;
+
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    
 }
 
 .main-nav--sticked {
