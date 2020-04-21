@@ -1,5 +1,7 @@
 let nav = document.querySelector(".main-nav");
 let logos = document.querySelectorAll(".logo");
+let slides = document.querySelectorAll(".quotes__slide")
+let points = document.querySelectorAll(".quotes__points div")
 
 window.addEventListener("scroll", function() {
     if(window.pageYOffset >= 33){
