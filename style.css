@@ -381,22 +381,48 @@ html {
     font-size: 28px;
     line-height: 36px;
     font-style: italic;
+    position: relative;
+}
 
+.slider__button{
+    position: absolute;
+    width: 300px;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: url(img/slider_button.png) center no-repeat;
+    transition: all .5s;
+}
+
+.slider__button:hover{
+    filter: brightness(.5);
+    background-color: rgba(255,255,255, .3)
+}
+
+.next-button{
+    left: auto;
+    right: 0;
+    transform: scale(-1,1);
 }
 
 .quotes__slider {
+    display: flex;
+    
     width: 1170px;
+    height: 450px;
     margin: 0 auto;
-    padding-top: 177px;
-    padding-bottom: 60px;
+    justify-content: flex-end;
+    flex-direction: column;
    
 }
+
 
 .quotes__slide {
     display:none;
     padding:0 231px;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     overflow: auto;
 }
 
@@ -414,20 +440,32 @@ html {
     display: block;
 }
 
-.qoutes__points{
+.quotes__points{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 40px;
+    
 }
-.qoutes__points div{
+.quotes__points div{
     margin:9px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);
+    transition: background-color .5s;
+    user-select: all;
+    cursor: pointer;
+}
+
+.quotes__points div:hover{
     background-color: white;
 }
 
-.qoutes__points .active{
+.quotes__points .active{
     width: 12px;
     height: 12px;
+    background-color: white;
+    cursor: default;
 }
+
