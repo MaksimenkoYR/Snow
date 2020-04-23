@@ -74,7 +74,11 @@ html {
     color: #fff;
     padding-top: 162px;
 
-    overflow: auto;
+    /* overflow: auto; */
+    height: 750px;
+
+    position: relative;
+
 }
 
 .title h1{
@@ -110,10 +114,11 @@ html {
 }
 
 .down-btn {
-    position: relative;
-
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 248px auto 100px;
-    /* margin-top: 148px; */
+    
 
     width: 50px;
     height: 50px;
@@ -121,8 +126,18 @@ html {
     font-size: 0px;
 
     border: 1px solid white;
-    border-radius: 25px;
+    border-radius: 50%;
+    transition: all .2s;
+    
 
+}
+
+.down-btn:hover {
+    transform: translateX(-50%) scale(1.2);
+}
+
+.down-btn:active {
+    transform: translateX(-50%) scale(.9);
 
 }
 
@@ -138,6 +153,8 @@ html {
     right: 22px;
 
     transform: rotate(45deg);
+    transition: all .5s;
+
 }
 
 .down-btn::before {
@@ -152,6 +169,8 @@ html {
     left: 22px;
 
     transform: rotate(-45deg);
+    transition: all .5s;
+
 }
 
 .about{
